@@ -7,4 +7,16 @@
   &:focus {
     color: $accent-color;
   }
+
+  &--footer-bottom-row {
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  &--footer-top-row {
+    padding-left: 44px;
+    color: #000;
+  }
 }

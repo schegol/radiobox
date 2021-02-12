@@ -1,0 +1,90 @@
+.main-menu__block {
+  @include list-reset;
+  @include dflex(nowrap, row, space-between, center);
+}
+
+.main-menu__submenu {
+  @include list-reset;
+  display: none;
+}
+
+.main-menu__item {
+  &--parent {
+    position: relative;
+    padding-right: 20px;
+
+    &::after {
+      @include abs-center-y;
+      right: 0;
+      display: block;
+      width: 12px;
+      height: 12px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("/img/icon-menu-arrow.svg");
+    }
+  }
+}
+
+.main-menu__link {
+  display: block;
+  padding: 10px 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: .1em;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.main-menu__item--parent .main-menu__link:hover + .main-menu__submenu,
+.main-menu__item--parent .main-menu__link:focus + .main-menu__submenu,
+.main-menu__submenu:hover,
+.main-menu__submenu--open {
+  @include dflex(nowrap, column, flex-start, flex-start);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: auto;
+  min-width: 300px;
+  max-width: 100%;
+  padding: 15px 10px;
+  background-color: $bg-color-2;
+  z-index: 20;
+}
+
+.main-menu__submenu:focus-within {
+  @include dflex(nowrap, column, flex-start, flex-start);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: auto;
+  min-width: 260px;
+  max-width: 100%;
+  padding: 15px 10px;
+  background-color: $bg-color-2;
+  z-index: 20;
+}
+
+.main-menu__submenu-item {
+  display: block;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.main-menu__submenu-link {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}

@@ -14,11 +14,11 @@ body {
   font-family: "Roboto", "Arial", sans-serif;
   color: #000;
   background-color: #fff;
-  //
-  // &.modal-open {
-  //   padding-right: 17px;
-  //   overflow: hidden;
-  // }
+  
+  &.modal-open {
+    padding-right: 17px;
+    overflow: hidden;
+  }
 }
 
 .header,
@@ -60,29 +60,3 @@ a {
   border: 0;
   clip: rect(0 0 0 0);
 }
-
-/*
-@media (min-width: $tablet-width) {
-  .container {
-    max-width: 738px;
-  }
-
-  .col-xl-3 {
-    flex-basis: 50%;
-    flex-grow: 0;
-    flex-shrink: 0;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .container {
-    max-width: 1280px;
-  }
-
-  .col-xl-3 {
-    flex-basis: 25%;
-    flex-grow: 0;
-    flex-shrink: 0;
-  }
-}
-*/
