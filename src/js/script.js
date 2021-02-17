@@ -70,4 +70,25 @@ $(document).ready(function() {
       closePhones();
     }
   });
+
+  const mainMenuToggle = $('.main-menu__mobile-toggle');
+  const mainMenu = $('.main-menu__block');
+  const closeMenu = function () {
+    mainMenu.removeClass('main-menu__block--open');
+  };
+
+  mainMenuToggle.click(function () {
+    mainMenu.toggleClass('main-menu__block--open');
+  });
+
+  $(window).mousedown(function (e) {
+    if (!mainMenu.is(e.target) && mainMenu.has(e.target).length === 0) {
+        closeMenu();
+    }
+  });
+
+  const submenuMobileToggle = $('.main-menu__submenu-toggle');
+  submenuMobileToggle.click(function () {
+    $(this).parent().toggleClass('main-menu__item--open');
+  });
 });

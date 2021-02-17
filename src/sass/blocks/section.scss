@@ -1,0 +1,27 @@
+.section {
+  padding: 50px 0;
+
+  &--index {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .section {
+    padding: 45px 0;
+
+    &--index {
+      padding: 35px 0;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .section {
+    padding: 40px 0;
+
+    &--index {
+      padding: 30px 0;
+    }
+  }
+}

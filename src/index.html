@@ -51,6 +51,7 @@
           <ul class="main-menu__block">
             <li class="main-menu__item main-menu__item--parent">
               <a class="main-menu__link link" href="#">Каталог</a>
+              <button class="main-menu__submenu-toggle" type="button"></button>
               <ul class="main-menu__submenu">
                 <li class="main-menu__submenu-item">
                   <a class="main-menu__submenu-link link" href="#">Коммутационные изделия</a>
@@ -100,6 +101,7 @@
             </li>
             <li class="main-menu__item main-menu__item--parent">
               <a class="main-menu__link link" href="#">О компании</a>
+              <button class="main-menu__submenu-toggle" type="button"></button>
               <ul class="main-menu__submenu">
                 <li class="main-menu__submenu-item">
                   <a class="main-menu__submenu-link link" href="#">Страница 1</a>
@@ -122,6 +124,7 @@
               <a class="main-menu__link link" href="#">Контакты</a>
             </li>
           </ul>
+          <button class="main-menu__mobile-toggle" type="button"></button>
         </nav>
       </div>
     </div>
@@ -140,7 +143,22 @@
   </header>
 
   <main class="main">
-
+    <section class="fast-links section section--index">
+      <h2 class="visually-hidden">Быстрые ссылки</h2>
+      <div class="container-new">
+        <div class="fast-links__list">
+          <a class="fast-links__link" href="#" style="background-image: url('/img/icon-links-manual.svg')">
+            <h3 class="fast-links__link-heading">Справочник</h3>
+          </a>
+          <a class="fast-links__link" href="#" style="background-image: url('/img/icon-links-delivery.svg')">
+            <h3 class="fast-links__link-heading">Оплата и доставка</h3>
+          </a>
+          <a class="fast-links__link" href="#" style="background-image: url('/img/icon-links-price.svg')">
+            <h3 class="fast-links__link-heading">Прайсы</h3>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
