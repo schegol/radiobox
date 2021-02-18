@@ -1,27 +1,44 @@
 .section {
-  padding: 50px 0;
+  padding: 20px 0 50px;
 
   &--index {
     padding: 40px 0;
   }
 }
 
+.section__heading {
+  @include reset;
+  margin-bottom: 20px;
+  color: #000;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 150%;
+}
+
 @media (max-width: $tablet-width) {
   .section {
-    padding: 45px 0;
+    padding: 20px 0 45px;
 
     &--index {
       padding: 35px 0;
     }
   }
+
+  .section__heading {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: $mobile-width) {
   .section {
-    padding: 40px 0;
+    padding: 15px 0 40px;
 
     &--index {
       padding: 30px 0;
     }
+  }
+
+  .section__heading {
+    font-size: 28px;
   }
 }
