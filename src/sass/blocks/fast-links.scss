@@ -4,23 +4,30 @@
 
 .fast-links__list {
   @include dflex(wrap, row, center, stretch);
+  width: calc(100% + 28px);
 }
 
 .fast-links__link {
   @include dflex(nowrap, column, flex-start, center);
   @include transition(background-color);
-  flex-basis: calc(33.3333% - 18px);
+  flex-basis: calc(33.3333% - 28px);
   min-height: 217px;
-  padding: 10px;
+  margin-right: 28px;
+  padding: 18px;
   background-repeat: no-repeat;
   background-size: auto 70px;
   background-position: center 50px;
   background-color: $fast-link-color;
   border-radius: 5px;
+  outline: none;
 
   &:hover,
   &:focus {
     background-color: lighten($fast-link-color, 20%);
+  }
+
+  &:nth-child(n+4) {
+    margin-top: 20px;
   }
 }
 
@@ -32,4 +39,36 @@
   color: #000;
   font-weight: 500;
   text-align: center;
+}
+
+@media (max-width: $tablet-width) {
+  .fast-links__list {
+    width: calc(100% + 16px);
+  }
+
+  .fast-links__link {
+    flex-basis: calc(33.3333% - 16px);
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: $xs-width) {
+  .fast-links__list {
+    width: 100%;
+  }
+
+  .fast-links__link {
+    flex-basis: 100%;
+    margin-right: 0;
+    min-height: 180px;
+    background-position: center 35px;
+
+    &:nth-child(n+2) {
+      margin-top: 20px;
+    }
+  }
+
+  .fast-links__link-heading {
+    margin-top: 110px;
+  }
 }

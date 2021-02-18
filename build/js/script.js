@@ -82,7 +82,7 @@ $(document).ready(function() {
   });
 
   $(window).mousedown(function (e) {
-    if (!mainMenu.is(e.target) && mainMenu.has(e.target).length === 0) {
+    if (!mainMenu.is(e.target) && mainMenu.has(e.target).length === 0 && !mainMenuToggle.is(e.target) && mainMenuToggle.has(e.target).length === 0) {
         closeMenu();
     }
   });
@@ -91,4 +91,7 @@ $(document).ready(function() {
   submenuMobileToggle.click(function () {
     $(this).parent().toggleClass('main-menu__item--open');
   });
+
+  //custom scrollbar:
+	$('.news-index__news-list').jScrollPane();
 });

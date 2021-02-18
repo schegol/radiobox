@@ -13,8 +13,8 @@ body {
   line-height: 16px;
   font-family: "Roboto", "Arial", sans-serif;
   color: #000;
-  background-color: #fff;
-  
+  background-color: $bg-color;
+
   &.modal-open {
     padding-right: 17px;
     overflow: hidden;
