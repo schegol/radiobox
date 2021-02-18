@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Radiobox</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__top-row">
+      <div class="container-new">
+        <p class="header__personal-links">
+          <a class="header__personal-link header__personal-link--login link" href="#">Вход</a>
+          <a class="header__personal-link link" href="#">Регистрация</a>
+        </p>
+      </div>
+    </div>
+    <div class="header__bottom-row">
+      <div class="container-new">
+        <a class="header__logo-link" href="/">
+          <img class="header__logo-img" src="/img/logo-header.png" alt="Логотип Radiobox">
+        </a>
+        <button class="header__search-block-toggle header__bottom-row-block"></button>
+        <form class="header__search-form header__bottom-row-block" action="#" method="get">
+          <input class="header__search-form-input" type="text" placeholder="Поиск">
+          <button class="header__search-form-submit" type="submit"></button>
+        </form>
+        <button class="header__call-block-toggle header__bottom-row-block"></button>
+        <div class="header__call-block header__bottom-row-block">
+          <a class="header__call-block-phone link" href="tel:+71234567890">+7 (123) 456-78-90</a>
+          <a class="header__call-block-order link" href="#">Заказать звонок</a>
+        </div>
+        <a class="header__cart header__cart--with-items header__bottom-row-block" href="#">
+          <p class="header__cart-counter">
+            <svg class="header__cart-counter-icon" focusable="false" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.7354 22.292C20.8155 22.292 19.2324 23.8414 19.2324 25.7949C19.2324 27.7148 20.7818 29.2979 22.7354 29.2979C24.6552 29.2979 26.2383 27.7485 26.2383 25.7949C26.2046 23.875 24.6552 22.292 22.7354 22.292Z" fill="#2D2A1F"></path>
+              <path d="M28.8992 5.58605C28.8319 5.58605 28.7308 5.55237 28.6298 5.55237H7.41006L7.07324 3.29567C6.87114 1.81366 5.59122 0.702148 4.07553 0.702148H1.34728C0.606277 0.702148 0 1.30843 0 2.04943C0 2.79044 0.606277 3.39672 1.34728 3.39672H4.07553C4.24394 3.39672 4.37867 3.53144 4.41235 3.69985L6.50064 17.9137C6.7701 19.6988 8.31947 21.0461 10.1383 21.0461H24.15C25.9015 21.0461 27.4172 19.7999 27.7877 18.0821L29.977 7.13543C30.1118 6.4281 29.6402 5.72078 28.8992 5.58605Z" fill="#2D2A1F"></path>
+              <path d="M14.1466 25.6265C14.0792 23.774 12.5298 22.292 10.6773 22.292C8.72374 22.393 7.24173 24.0098 7.30909 25.9297C7.37646 27.7822 8.89215 29.2642 10.7447 29.2642H10.812C12.7319 29.1631 14.2476 27.5464 14.1466 25.6265Z" fill="#2D2A1F"></path>
+            </svg>
+            <span class="header__cart-counter-number">10</span>
+          </p>
+          <span class="header__cart-sum">125 048 ₽</span>
+        </a>
+      </div>
+    </div>
+    <div class="header__menu-row">
+      <div class="container-new">
+        <nav class="header__menu main-menu">
+          <ul class="main-menu__block">
+            <li class="main-menu__item main-menu__item--parent">
+              <a class="main-menu__link link" href="#">Каталог</a>
+              <button class="main-menu__submenu-toggle" type="button"></button>
+              <ul class="main-menu__submenu">
+                <li class="main-menu__submenu-item">
+                  <a class="main-menu__submenu-link link" href="#">Коммутационные изделия</a>
+                </li>
+                <li class="main-menu__submenu-item">
+                  <a class="main-menu__submenu-link link" href="#">Полупроводники</a>
+                </li>
+                <li class="main-menu__submenu-item">
+                  <a class="main-menu__submenu-link link" href="#">Конденсаторы</a>
+                </li><li class="main-menu__submenu-item">
+                  <a class="main-menu__submenu-link link" href="#">Резисторы</a>
+                </li>
+                <li class="main-menu__submenu-item">
+                  <a class="main-menu__submenu-link link" href="#">Предохранители</a>
+                </li>
+                <li class="main-menu__submenu-item">
+                  <a class="main-menu__submenu-link link" href="#">Кабели</a>
+                </li>
+                <li class="main-menu__submenu-item">
+                  <a class="main-menu__submenu-link link" href="#">Установочные изделия</a>
+                </li>
+                <li class="main-menu__submenu-item">
+                  <a class="main-menu__submenu-link link" href="#">Инструмент</a>
+                </li>
+                <li class="main-menu__submenu-item">
+                  <a class="main-menu__submenu-link link" href="#">Аксессуары ПК и сетевые принадлежности</a>
+                </li>
+                <li class="main-menu__submenu-item">
+                  <a class="main-menu__submenu-link link" href="#">Кварцы</a>
+                </li>
+                <li class="main-menu__submenu-item">
+                  <a class="main-menu__submenu-link link" href="#">Дроссели высокочастотные</a>
+                </li>
+                <li class="main-menu__submenu-item">
+                  <a class="main-menu__submenu-link link" href="#">Трансформаторы</a>
+                </li>
+                <li class="main-menu__submenu-item">
+                  <a class="main-menu__submenu-link link" href="#">Реле</a>
+                </li>
+                <li class="main-menu__submenu-item">
+                  <a class="main-menu__submenu-link link" href="#">Усилители мощности</a>
+                </li>
+                <li class="main-menu__submenu-item">
+                  <a class="main-menu__submenu-link link" href="#">Разное</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu__item main-menu__item--parent">
+              <a class="main-menu__link link" href="#">О компании</a>
+              <button class="main-menu__submenu-toggle" type="button"></button>
+              <ul class="main-menu__submenu">
+                <li class="main-menu__submenu-item">
+                  <a class="main-menu__submenu-link link" href="#">Страница 1</a>
+                </li>
+                <li class="main-menu__submenu-item">
+                  <a class="main-menu__submenu-link link" href="#">Страница 2</a>
+                </li>
+                <li class="main-menu__submenu-item">
+                  <a class="main-menu__submenu-link link" href="#">Страница 3</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link link" href="#">Справочники</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link link" href="#">Производители</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <button class="main-menu__mobile-toggle" type="button"></button>
+        </nav>
+      </div>
+    </div>
+    <div class="header__breadcrumbs-row">
+      <div class="container-new">
+        <ul class="header__breadcrumbs">
+          <li class="header__breadcrumbs-item">
+            <a class="header__breadcrumbs-link link" href="#">Главная</a>
+          </li>
+          <li class="header__breadcrumbs-item">
+            <a class="header__breadcrumbs-link header__breadcrumbs-link--current">Каталог</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="catalog-section-list section">
+      <div class="container-new">
+        <h2 class="catalog-section-list__heading section__heading">Каталог</h2>
+        <div class="catalog-section-list__list">
+          <div class="catalog-section-list__single-block">
+            <div class="catalog-section-list__single-block-img-block">
+              <img class="catalog-section-list__single-block-img" src="/img/img-catalog-section.png" alt="Коммутационные изделия">
+            </div>
+            <div class="catalog-section-list__links catalog-section-list__links--ru">
+              <h3 class="catalog-section-list__links-heading">Коммутационные изделия</h3>
+              <ul class="catalog-section-list__links-list">
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Переключатели клавишные</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">DIP переключатели</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Переключатели с механическим замком</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Поворотные переключатели</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Галетные переключатели</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Тумблеры</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Движковые переключатели</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Кнопки</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Микро кнопки</a>
+                </li>
+              </ul>
+            </div>
+            <div class="catalog-section-list__links catalog-section-list__links--en">
+              <h3 class="catalog-section-list__links-heading">Switches</h3>
+              <ul class="catalog-section-list__links-list">
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Rocker Switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Dip switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Camlocks & Key switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Dip switch rotary</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Gang switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Toggle switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Slide switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Push Button Switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Tact switches</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="catalog-section-list__single-block">
+            <div class="catalog-section-list__single-block-img-block">
+              <img class="catalog-section-list__single-block-img" src="/img/img-catalog-section.png" alt="Коммутационные изделия">
+            </div>
+            <div class="catalog-section-list__links catalog-section-list__links--ru">
+              <h3 class="catalog-section-list__links-heading">Коммутационные изделия</h3>
+              <ul class="catalog-section-list__links-list">
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Переключатели клавишные</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">DIP переключатели</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Переключатели с механическим замком</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Поворотные переключатели</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Галетные переключатели</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Тумблеры</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Движковые переключатели</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Кнопки</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Микро кнопки</a>
+                </li>
+              </ul>
+            </div>
+            <div class="catalog-section-list__links catalog-section-list__links--en">
+              <h3 class="catalog-section-list__links-heading">Switches</h3>
+              <ul class="catalog-section-list__links-list">
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Rocker Switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Dip switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Camlocks & Key switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Dip switch rotary</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Gang switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Toggle switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Slide switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Push Button Switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Tact switches</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="catalog-section-list__single-block">
+            <div class="catalog-section-list__single-block-img-block">
+              <img class="catalog-section-list__single-block-img" src="/img/img-catalog-section.png" alt="Коммутационные изделия">
+            </div>
+            <div class="catalog-section-list__links catalog-section-list__links--ru">
+              <h3 class="catalog-section-list__links-heading">Коммутационные изделия</h3>
+              <ul class="catalog-section-list__links-list">
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Переключатели клавишные</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">DIP переключатели</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Переключатели с механическим замком</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Поворотные переключатели</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Галетные переключатели</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Тумблеры</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Движковые переключатели</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Кнопки</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Микро кнопки</a>
+                </li>
+              </ul>
+            </div>
+            <div class="catalog-section-list__links catalog-section-list__links--en">
+              <h3 class="catalog-section-list__links-heading">Switches</h3>
+              <ul class="catalog-section-list__links-list">
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Rocker Switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Dip switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Camlocks & Key switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Dip switch rotary</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Gang switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Toggle switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Slide switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Push Button Switches</a>
+                </li>
+                <li class="catalog-section-list__links-item">
+                  <a class="catalog-section-list__links-link" href="#">Tact switches</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top-row">
+      <div class="container-new">
+        <div class="footer__top-row-column footer__top-row-column--logo">
+          <a class="footer__logo-link" href="/">
+            <img class="footer__logo-img" src="img/logo-footer.png" alt="Логотип Radiobox">
+          </a>
+          <p class="footer__desc">
+            Электронные компоненты и материалы
+          </p>
+          <p class="footer__copyright">
+            "Радиобокс" Copyright © 1999- 2020
+          </p>
+        </div>
+        <div class="footer__top-row-column footer__top-row-column--additional">
+          <a class="footer__additional-link footer__additional-link--delivery link link--footer-top-row" href="#">
+            Доставка по России, ЕАЭС, СНГ
+          </a>
+        </div>
+        <div class="footer__top-row-column footer__top-row-column--contacts">
+          <ul class="footer__contacts-list footer__contacts-list--phones">
+            <li class="footer__contacts-list-item">
+              <a class="footer__contacts-list-link footer__contacts-list-link--phone link link--footer-top-row" href="tel:+78123279270">
+                +7 (812) 327-9270
+              </a>
+            </li>
+            <li class="footer__contacts-list-item">
+              <a class="footer__contacts-list-link footer__contacts-list-link--phone link link--footer-top-row" href="tel:+78123889912">
+                +7 (812) 388-9912
+              </a>
+            </li>
+            <li class="footer__contacts-list-item">
+              <a class="footer__contacts-list-link footer__contacts-list-link--phone link link--footer-top-row" href="tel:+78123889967">
+                +7 (812) 388-9967
+              </a>
+            </li>
+          </ul>
+          <ul class="footer__contacts-list footer__contacts-list--more">
+            <li class="footer__contacts-list-item">
+              <a class="footer__contacts-list-link footer__contacts-list-link--mail link link--footer-top-row" href="mailto:info@radiobox.ru">
+                info@radiobox.ru
+              </a>
+            </li>
+            <li class="footer__contacts-list-item">
+              <p class="footer__contacts-list-link footer__contacts-list-link--schedule">
+                <span>
+                  <b>пн-чт </b>09.00-18.00
+                </span>
+                <span>
+                  <b>пт </b>09.00-15.00
+                </span>
+              </p>
+            </li>
+            <li class="footer__contacts-list-item">
+              <p class="footer__contacts-list-link footer__contacts-list-link--icq">
+                <a class="link" href="https://icq.im/589273548" target="_blank">589273548</a>
+                <a class="link" href="https://icq.im/424106786" target="_blank">424106786</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom-row">
+      <div class="container-new">
+        <a class="footer__sitemap-link link link--footer-bottom-row" href="#">Карта сайта</a>
+        <ul class="footer__bottom-row-menu">
+          <li class="footer__bottom-menu-item">
+            <a class="footer__bottom-menu-link link link--footer-bottom-row" href="#">Обработка персональных данных</a>
+          </li>
+          <li class="footer__bottom-menu-item">
+            <a class="footer__bottom-menu-link link link--footer-bottom-row" href="#">Политика конфиденциальности</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/focus-within/browser"></script>
+  <script>focusWithin(document)</script>
+  <script src="vendor/js/jquery-3.4.1.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

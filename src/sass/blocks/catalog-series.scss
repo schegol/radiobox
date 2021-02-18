@@ -1,0 +1,139 @@
+.catalog-series__list {
+  @include dflex(wrap, row, flex-start, stretch);
+  width: calc(100% + 28px);
+}
+
+.catalog-series__item {
+  @include dflex(nowrap, row, flex-start, center);
+  @include transition(background-color);
+  flex-basis: calc(50% - 28px);
+  margin-right: 28px;
+  padding: 20px;
+  outline: none;
+  background-color: $fast-link-bg-color;
+
+  &:hover,
+  &:focus {
+    background-color: darken($fast-link-bg-color, 20%);
+  }
+
+  &:nth-child(n+3) {
+    margin-top: 20px;
+  }
+}
+
+.catalog-series__item-img-block {
+  flex-shrink: 0;
+  width: 100px;
+  height: 70px;
+  margin-right: 20px;
+}
+
+.catalog-series__item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.catalog-series__item-heading {
+  @include reset;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000;
+}
+
+.catalog-series__item-series-heading {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #878372;
+}
+
+.catalog-series__item-series-list {
+  @include reset;
+  font-size: 14px;
+  line-height: 16px;
+  color: #878372;
+}
+
+.catalog-series__item-sertificates {
+  @include dflex(wrap, row, flex-start, flex-start);
+  flex-basis: 156px;
+  flex-shrink: 0;
+  margin-right: -10px;
+  margin-left: auto;
+}
+
+.catalog-series__item-sertificate {
+  margin-right: 10px;
+
+  &:nth-child(n+5) {
+    margin-top: 10px;
+  }
+}
+
+.catalog-series__item-text {
+  margin-right: 20px;
+}
+
+@media (max-width: $tablet-width) {
+  .catalog-series__list {
+    width: calc(100% + 20px);
+  }
+  
+  .catalog-series__item {
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-right: 20px;
+  }
+
+  .catalog-series__item-sertificates {
+    flex-basis: auto;
+    align-self: center;
+    justify-content: center;
+    max-width: 260px;
+    margin: 10px -10px -10px 0;
+  }
+
+  .catalog-series__item-img-block {
+    align-self: center;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .catalog-series__item-text {
+    @include dflex(nowrap, column, flex-start, center);
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .catalog-series__item-sertificate {
+    margin-bottom: 10px;
+
+    &:nth-child(n+5) {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (max-width: $xs-width) {
+  .catalog-series__list {
+    width: 100%;
+  }
+
+  .catalog-series__item {
+    flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+
+    &:nth-child(n+3) {
+      margin-top: 0;
+    }
+  }
+}
