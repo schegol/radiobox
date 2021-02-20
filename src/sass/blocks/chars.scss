@@ -1,0 +1,63 @@
+.chars {
+  width: 100%;
+}
+
+.chars__row td {
+  width: 50%;
+}
+
+.chars__name {
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+
+  &::after {
+    @include abs-center-y;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px dashed $bg-color-2;
+    z-index: 0;
+  }
+}
+
+.chars__name span {
+  position: relative;
+  display: inline-block;
+  padding-right: 10px;
+  background-color: $bg-color;
+  z-index: 1;
+}
+
+.chars__value {
+  padding-left: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+}
+
+@media (max-width: $tablet-width) {
+  .chars__name {
+    &::after {
+      display: none;
+    }
+  }
+
+  .chars__row {
+    &:not(:last-child) {
+      position: relative;
+
+      &::after {
+        @include abs-pseudo;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        border: 1px dashed $bg-color-2;
+      }
+    }
+  }
+}

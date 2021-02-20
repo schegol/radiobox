@@ -1,0 +1,93 @@
+.tabs__list {
+  @include list-reset;
+  @include dflex(nowrap, row, flex-start, flex-end);
+  position: relative;
+
+  &::after {
+    @include abs-pseudo;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $bg-color-2;
+  }
+}
+
+.tabs__link {
+  @include dflex(nowrap, row, center, center);
+  @include transition(color);
+  position: relative;
+  padding: 0 10px 10px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+  color: #AFA786;
+  outline: none;
+
+  &:hover,
+  &:focus,
+  &--active {
+    color: #A18864;
+  }
+
+  &::after {
+    @include abs-pseudo;
+    @include transition(background-color);
+    top: calc(100% - 2px);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    z-index: 1;
+  }
+
+  &--active {
+    color: #A18864;
+
+    &::after {
+      background-color: #A18864;
+    }
+  }
+}
+
+.tabs__single-tab {
+  padding-top: 20px;
+}
+
+.tabs__single-tab p {
+  @include reset;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .tabs__list {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .tabs__link {
+    padding: 7px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .tabs__link {
+    font-size: 15px;
+  }
+
+  .chars__name,
+  .chars__value {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

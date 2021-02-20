@@ -1,0 +1,40 @@
+.catalog-detail__top .container-new {
+  @include dflex(nowrap, row, flex-start, flex-start);
+}
+
+.catalog-detail__left-block {
+  flex-shrink: 0;
+  flex-basis: 364px;
+  margin-right: 28px;
+}
+
+.catalog-detail__right-block {
+  flex-grow: 1;
+}
+
+@media (max-width: $tablet-width) {
+  .catalog-detail__left-block {
+    max-width: 50%;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .catalog-detail__left-block {
+    max-width: 40%;
+  }
+}
+
+@media (max-width: $xs-width) {
+  .catalog-detail__left-block {
+    flex-basis: 100%;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-right: 0;
+  }
+
+  .catalog-detail__right-block {
+    max-width: 100%;
+  }
+}

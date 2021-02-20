@@ -101,12 +101,12 @@
 
 .news-index__news-list .jspDrag {
   background-color: $news-accent-color;
-  border-radius: 5px;
+  border-radius: $border-radius;
 }
 
 .news-index__news-list .jspTrack {
   background-color: #DED9C7;
-  border-radius: 5px;
+  border-radius: $border-radius;
 }
 
 .news-index__news-list .jspVerticalBar {

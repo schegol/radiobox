@@ -80,7 +80,7 @@
   font-size: 16px;
   line-height: 19px;
   background-color: #F8F5EB;
-  border-radius: 5px;
+  border-radius: $border-radius;
   border: none;
   outline: none;
   box-shadow: 0 0 0 rgba(0,0,0,0);
@@ -106,7 +106,7 @@
   height: 30px;
   padding: 0;
   border: none;
-  border-radius: 5px;
+  border-radius: $border-radius;
   background-color: #99906E;
   transform: translateY(-50%);
   outline: none;
