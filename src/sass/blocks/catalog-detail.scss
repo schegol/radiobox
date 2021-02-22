@@ -67,6 +67,7 @@
 
 .catalog-detail__bottom {
   @include dflex(nowrap, row, space-between, flex-start);
+  width: 100%;
   margin-top: 20px;
   border-top: 1px solid $bg-color-2;
 }
@@ -77,11 +78,19 @@
     max-width: 50%;
     margin-right: 20px;
   }
+
+  .catalog-detail__right-block {
+    max-width: calc(100% - 384px);
+  }
 }
 
 @media (max-width: $mobile-width) {
   .catalog-detail__left-block {
     max-width: 40%;
+  }
+
+  .catalog-detail__right-block {
+    max-width: calc(60% - 20px);
   }
 }
 
@@ -96,5 +105,9 @@
 
   .catalog-detail__right-block {
     max-width: 100%;
+  }
+
+  .catalog-detail__bottom {
+    flex-wrap: wrap;
   }
 }

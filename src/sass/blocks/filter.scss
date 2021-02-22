@@ -1,0 +1,182 @@
+.filter {
+  margin-top: 20px;
+}
+
+.filter__form-content {
+  @include dflex(nowrap, column, flex-start, flex-start);
+  padding: 20px;
+}
+
+.filter__form {
+  background-color: $fast-link-bg-color;
+  border-radius: $border-radius;
+}
+
+.filter__form-head {
+  @include dflex(nowrap, row, space-between, center);
+  width: 100%;
+  margin-bottom: 23px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #C5C5C5;
+}
+
+.filter__form-heading {
+  @include reset;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+}
+
+.filter__form-funnel-btn {
+  @include dflex(nowrap, row, center, center);
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  & path {
+    @include transition(fill);
+    fill: #878372;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    & path {
+      fill: #000;
+    }
+  }
+}
+
+.filter__form-body,
+.filter__single-block {
+  width: 100%;
+
+  &:not(:last-child) {
+      margin-bottom: 20px;
+  }
+}
+
+.filter__single-block-head {
+  @include dflex(nowrap, row, space-between, center);
+  width: 100%;
+  cursor: pointer;
+}
+
+.filter__single-block-heading {
+  @include reset;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+}
+
+.filter__single-block-toggle {
+  @include dflex(nowrap, row, center, center);
+  @include transition(transform);
+  min-width: 20px;
+  min-height: 20px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transform: rotate(0);
+
+  & path {
+    @include transition(stroke);
+    stroke: #000;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    & path {
+      stroke: $accent-color;
+    }
+  }
+}
+
+.filter__single-block--open .filter__single-block-toggle {
+  transform: rotate(-180deg);
+}
+
+.filter__checkbox-label-text {
+  @include transition(color);
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+}
+
+.filter__checkbox-label-counter {
+  @include transition(color);
+  font-size: 16px;
+  line-height: 19px;
+  color: #878372;
+}
+
+.filter__checkbox-label {
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
+
+  &:first-of-type {
+    margin-top: 10px;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
+  &::before {
+    @include abs-center-y;
+    @include transition(border-color);
+    left: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #e9e5d1;
+    border: 1px solid #1c1b1b;
+    border-radius: 3px;
+  }
+
+  &::after {
+    @include abs-center-y;
+    left: 0;
+    display: none;
+    width: 20px;
+    height: 20px;
+    background-color: #1c1b1b;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 8px 6px;
+    background-image: url("/img/icon-filter-checkbox.svg");
+    border-radius: 3px;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+
+    &::before {
+      border-color: $accent-color;
+    }
+
+    & .filter__checkbox-label-text,
+    & .filter__checkbox-label-counter {
+      color: $accent-color;
+    }
+  }
+}
+
+.filter__checkbox:checked + .filter__checkbox-label::after {
+  display: block;
+}
+
+.filter__single-block-body {
+  @include dflex(nowrap, column, flex-start, flex-start);
+}

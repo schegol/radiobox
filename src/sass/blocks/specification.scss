@@ -1,0 +1,187 @@
+.specification {
+  padding-top: 20px;
+}
+
+.specification__heading {
+  @include reset;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+  color: #000;
+}
+
+.specification__table {
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+}
+
+.specification__replacement-row {
+  background-color: $fast-link-bg-color;
+}
+
+.specification__replacement-row-heading {
+  @include reset;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000;
+}
+
+.specification__table tr {
+  padding: 5px 13px 5px 20px;
+}
+
+.specification__table td {
+  padding: 10px;
+
+  &:first-of-type,
+  &:nth-of-type(2) {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000;
+  }
+
+  &:nth-last-child(1),
+  &:nth-last-child(2),
+  &:nth-last-child(3) {
+    text-align: center;
+  }
+}
+
+.specification__table th {
+  padding: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000;
+  text-align: left;
+
+  &:nth-last-child(1),
+  &:nth-last-child(2),
+  &:nth-last-child(3) {
+    text-align: center;
+  }
+
+  &:nth-child(1) {
+    width: 31%;
+  }
+
+  &:nth-child(2) {
+    width: 7%;
+  }
+
+  &:nth-child(3) {
+    width: 27%;
+  }
+
+  &:nth-child(4) {
+    width: 6%;
+  }
+
+  &:nth-child(5) {
+    width: 7%;
+  }
+
+  &:nth-child(6) {
+    width: 9%;
+  }
+
+  &:nth-child(7) {
+    width: 9%;
+  }
+
+  &:nth-child(8) {
+    width: 5%;
+  }
+}
+
+.specification__content-head {
+   background-color: $bg-color-2;
+ }
+
+.specification__replacement-row-toggle {
+  @include dflex(nowrap, row, center, center);
+  width: 100%;
+  height: 100%;
+  min-height: 15px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  & path {
+    @include transition(stroke);
+    stroke: #000;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    & path {
+      stroke: $accent-color;
+    }
+  }
+}
+
+.specification__product-buy {
+  outline: none;
+
+  & path {
+    @include transition(fill);
+    fill: $btn-color;
+  }
+
+  &:hover,
+  &:focus {
+    & path {
+      fill: $accent-color;
+    }
+  }
+}
+
+.specification__download-btn {
+  @include dflex(nowrap, column, flex-start, center);
+  font-size: 12px;
+  line-height: 14px;
+  color: #000;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin-bottom: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/img/icon-pdf.svg");
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .specification {
+    overflow-x: auto;
+  }
+
+  .specification__table td,
+  .specification__table th {
+    padding: 5px;
+  }
+
+  .specification__table td,
+  .specification__table td:first-of-type,
+  .specification__table td:nth-of-type(2) {
+      font-size: 12px;
+      line-height: 14px;
+  }
+}

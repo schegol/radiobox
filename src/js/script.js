@@ -245,4 +245,16 @@ $(document).ready(function() {
       ]
     });
   }
+
+  //catalog filter:
+  const singleBlockToggle = $('.filter__single-block-head, .filter__single-block-toggle');
+  const singleBlockBody = $('.filter__single-block-body');
+
+  singleBlockToggle.click(function (e) {
+    let parent = $(this).parents('.filter__single-block');
+
+    e.stopPropagation();
+    parent.toggleClass('filter__single-block--open');
+    parent.find('.filter__single-block-body').slideToggle(200);
+  });
 });
