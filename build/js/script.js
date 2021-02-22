@@ -212,13 +212,15 @@ $(document).ready(function() {
       prevArrow: sliderPrev,
       nextArrow: sliderNext,
       autoplay: false,
-      adaptiveHeight: true,
+      adaptiveHeight: false,
       slidesToShow: 1,
       slidesToScroll: 1,
       infinite: false,
+      fade: true,
     });
-    
+
     smallSlider.slick({
+      dots: false,
       arrows: false,
       asNavFor: bigSlider,
       autoplay: false,
@@ -226,6 +228,21 @@ $(document).ready(function() {
       slidesToShow: 4,
       slidesToScroll: 1,
       infinite: false,
+      focusOnSelect: true,
+      responsive: [
+          {
+              breakpoint: 767,
+              settings: {
+                  slidesToShow: 3
+              }
+          },
+          // {
+          //     breakpoint: 575,
+          //     settings: {
+          //         slidesToShow: 2
+          //     }
+          // }
+      ]
     });
   }
 });
