@@ -13,6 +13,64 @@
   flex-grow: 1;
 }
 
+.catalog-detail__additional {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid $bg-color-2;
+}
+
+.catalog-detail__additional-heading {
+  @include reset;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+  color: #000;
+}
+
+.catalog-detail__additional-table-download {
+  position: relative;
+  padding-left: 21px;
+  text-decoration: underline;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+
+  &::before {
+    @include abs-center-y;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/img/icon-pdf.svg");
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.catalog-detail__additional-table-sertificates {
+  @include dflex(wrap, row, flex-start, flex-start);
+  width: calc(100% + 5px);
+}
+
+.catalog-detail__additional-table-sertificate {
+  margin-right: 5px;
+  flex-basis: 20px;
+  width: 20px;
+  max-height: 20px;
+}
+
+.catalog-detail__bottom {
+  @include dflex(nowrap, row, space-between, flex-start);
+  margin-top: 20px;
+  border-top: 1px solid $bg-color-2;
+}
+
 @media (max-width: $tablet-width) {
   .catalog-detail__left-block {
     width: 364px;

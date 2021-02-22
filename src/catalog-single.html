@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="vendor/css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Radiobox</title>
 </head>
@@ -143,19 +144,49 @@
   </header>
 
   <main class="main">
-    <section class="catalog-detail section">
-      <div class="container-new">
-        <div class="catalog-detail__top">
+    <section class="catalog-detail">
+      <div class="catalog-detail__top section">
+        <div class="container-new">
           <div class="catalog-detail__left-block catalog-detail__main-slider detail-slider">
-            <ul class="detail-slider__big">
-              <li class="detail-slider__big-item">
-                <img class="detail-slider__big-item-img" src="/img/img-slider-big.png" alt="Переключатели (Rocker switches) — Изображение 1">
+            <div class="detail-slider__big-container">
+              <div class="detail-slider__big-arrows">
+                <button type="button" class="detail-slider__big-arrow detail-slider__big-arrow--prev"></button>
+                <button type="button" class="detail-slider__big-arrow detail-slider__big-arrow--next"></button>
+              </div>
+              <div class="detail-slider__big">
+                <div class="detail-slider__big-item">
+                  <img class="detail-slider__big-item-img" src="/img/img-slider-big.png" alt="Переключатели (Rocker switches) — Изображение 1">
+                </div>
+                <div class="detail-slider__big-item">
+                  <img class="detail-slider__big-item-img" src="/img/img-slider-big.png" alt="Переключатели (Rocker switches) — Изображение 1">
+                </div>
+                <div class="detail-slider__big-item">
+                  <img class="detail-slider__big-item-img" src="/img/img-slider-big.png" alt="Переключатели (Rocker switches) — Изображение 1">
+                </div>
+                <div class="detail-slider__big-item">
+                  <img class="detail-slider__big-item-img" src="/img/img-slider-big.png" alt="Переключатели (Rocker switches) — Изображение 1">
+                </div>
+                <div class="detail-slider__big-item">
+                  <img class="detail-slider__big-item-img" src="/img/img-slider-big.png" alt="Переключатели (Rocker switches) — Изображение 1">
+                </div>
+                <div class="detail-slider__big-item">
+                  <img class="detail-slider__big-item-img" src="/img/img-slider-big.png" alt="Переключатели (Rocker switches) — Изображение 1">
+                </div>
+              </div>
+            </div>
+            <ul class="detail-slider__small">
+              <li class="detail-slider__small-item">
+                <img class="detail-slider__small-item-img" src="/img/img-slider-big.png" alt="Переключатели (Rocker switches) — Изображение 1">
               </li>
               <li class="detail-slider__small-item">
                 <img class="detail-slider__small-item-img" src="/img/img-slider-big.png" alt="Переключатели (Rocker switches) — Изображение 1">
               </li>
-            </ul>
-            <ul class="detail-slider__small">
+              <li class="detail-slider__small-item">
+                <img class="detail-slider__small-item-img" src="/img/img-slider-big.png" alt="Переключатели (Rocker switches) — Изображение 1">
+              </li>
+              <li class="detail-slider__small-item">
+                <img class="detail-slider__small-item-img" src="/img/img-slider-big.png" alt="Переключатели (Rocker switches) — Изображение 1">
+              </li>
               <li class="detail-slider__small-item">
                 <img class="detail-slider__small-item-img" src="/img/img-slider-big.png" alt="Переключатели (Rocker switches) — Изображение 1">
               </li>
@@ -166,30 +197,158 @@
           </div>
           <div class="catalog-detail__right-block">
             <h1 class="catalog-detail__heading section__heading">Переключатели (Rocker switches)</h1>
-            <ul class="catalog-detail__tabs">
-              <li class="catalog-detail__tabs-tab">
-                <a class="catalog-detail__tabs-link" href="javasript:;" data-tab="chars">Характеристики</a>
-              </li>
-              <li class="catalog-detail__tabs-tab">
-                <a class="catalog-detail__tabs-link" href="javasript:;" data-tab="schemes">Схема</a>
-              </li>
-            </ul>
-            <div class="catalog-detail__tabs-content">
-              <div class="catalog-detail__single-tab" data-tab="chars">
-
+            <div class="catalog-detail__tabs tabs">
+              <ul class="tabs__list">
+                <li class="tabs__item">
+                  <a class="tabs__link tabs__link--active" href="javasript:;" data-tab="chars">Характеристики</a>
+                </li>
+                <li class="tabs__item">
+                  <a class="tabs__link" href="javasript:;" data-tab="scheme">Схема</a>
+                </li>
+              </ul>
+              <div class="tabs__content">
+                <div class="tabs__single-tab" data-tab="chars">
+                  <table class="chars">
+                    <tbody>
+                      <tr class="chars__row">
+                        <td class="chars__name">
+                          <span>Механический ресурс</span>
+                        </td>
+                        <td class="chars__value">
+                          <span>Более 30,000 циклов</span>
+                        </td>
+                      </tr>
+                      <tr class="chars__row">
+                        <td class="chars__name">
+                          <span>Электрический ресурс</span>
+                        </td>
+                        <td class="chars__value">
+                          <span>Более 10,000 циклов</span>
+                        </td>
+                      </tr>
+                      <tr class="chars__row">
+                        <td class="chars__name">
+                          <span>Предельные параметры</span>
+                        </td>
+                        <td class="chars__value">
+                          <span>15A,250VAC</span>
+                        </td>
+                      </tr>
+                      <tr class="chars__row">
+                        <td class="chars__name">
+                          <span>Сопротивление изоляции</span>
+                        </td>
+                        <td class="chars__value">
+                          <span>1,000M 500VDC</span>
+                        </td>
+                      </tr>
+                      <tr class="chars__row">
+                        <td class="chars__name">
+                          <span>Материал корпуса</span>
+                        </td>
+                        <td class="chars__value">
+                          <span>Nylon 66 UL 94-V2</span>
+                        </td>
+                      </tr>
+                      <tr class="chars__row">
+                        <td class="chars__name">
+                          <span>Материал кнопки</span>
+                        </td>
+                        <td class="chars__value">
+                          <span>Nylon 66 UL 94-V2</span>
+                        </td>
+                      </tr>
+                      <tr class="chars__row">
+                        <td class="chars__name">
+                          <span>Цвет корпуса</span>
+                        </td>
+                        <td class="chars__value">
+                          <span>Черный</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="tabs__single-tab" data-tab="scheme">
+                  <div class="scheme">
+                    <div class="scheme__item">
+                      <a class="scheme__img-block" data-fancybox="scheme" href="/img/img-scheme-1.png">
+                        <img class="scheme__img" src="/img/img-scheme-1.png" alt="Изображение — ">
+                      </a>
+                      <p class="scheme__item-desc"></p>
+                    </div>
+                    <div class="scheme__item">
+                      <a class="scheme__img-block" data-fancybox="scheme" href="/img/img-scheme-2.png">
+                        <img class="scheme__img" src="/img/img-scheme-2.png" alt="Изображение — Тип выводов - T">
+                      </a>
+                      <p class="scheme__item-desc">Тип выводов - T</p>
+                    </div>
+                    <div class="scheme__item">
+                      <a class="scheme__img-block" data-fancybox="scheme" href="/img/img-scheme-3.png">
+                        <img class="scheme__img" src="/img/img-scheme-3.png" alt="Изображение — KCD4-201N">
+                      </a>
+                      <p class="scheme__item-desc">KCD4-201N</p>
+                    </div>
+                    <div class="scheme__item">
+                      <a class="scheme__img-block" data-fancybox="scheme" href="/img/img-scheme-4.png">
+                        <img class="scheme__img" src="/img/img-scheme-4.png" alt="Изображение — KCD4-JK/N">
+                      </a>
+                      <p class="scheme__item-desc">KCD4-JK/N</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="catalog-detail__single-tab" data-tab="schemes">
-
-              </div>
+            </div>
+            <div class="catalog-detail__additional">
+              <h2 class="catalog-detail__additional-heading">Дополнительная информация</h2>
+              <table class="catalog-detail__additional-table chars">
+                <tbody>
+                  <tr class="chars__row">
+                    <td class="chars__name">
+                      <span>Производтель</span>
+                    </td>
+                    <td class="chars__value">
+                      <span>Vishay Intertechnology, Inc</span>
+                    </td>
+                  </tr>
+                  <tr class="chars__row">
+                    <td class="chars__name">
+                      <span>Описание</span>
+                    </td>
+                    <td class="chars__value">
+                      <a class="catalog-detail__additional-table-download" href="#">71kb</a>
+                      <!-- <span>71kb</span> -->
+                    </td>
+                  </tr>
+                  <tr class="chars__row">
+                    <td class="chars__name">
+                      <span>Сертификаты</span>
+                    </td>
+                    <td class="chars__value">
+                      <div class="catalog-detail__additional-table-sertificates">
+                        <img class="catalog-detail__additional-table-sertificate" src="/img/img-sert-1.png" alt="sert 1">
+                        <img class="catalog-detail__additional-table-sertificate" src="/img/img-sert-2.png" alt="sert 2">
+                        <img class="catalog-detail__additional-table-sertificate" src="/img/img-sert-3.png" alt="sert 3">
+                        <img class="catalog-detail__additional-table-sertificate" src="/img/img-sert-4.png" alt="sert 4">
+                      </div>
+                      <!-- <span>15A,250VAC</span> -->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
-        <div class="catalog-detail__bottom">
-          <div class="catalog-detail__left-block">
+        <div class="container-new">
+          <div class="catalog-detail__bottom">
+            <div class="catalog-detail__left-block">
+              <div class="catalog-detail__filter filter">
+                
+              </div>
+            </div>
+            <div class="catalog-detail__right-block">
 
-          </div>
-          <div class="catalog-detail__right-block">
-
+            </div>
           </div>
         </div>
       </div>
@@ -277,6 +436,8 @@
   <script src="https://unpkg.com/focus-within/browser"></script>
   <script>focusWithin(document)</script>
   <script src="vendor/js/jquery-3.4.1.min.js"></script>
+  <script src="vendor/js/slick.min.js"></script>
+  <script src="vendor/js/jquery.fancybox.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
