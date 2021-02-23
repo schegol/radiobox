@@ -2687,9 +2687,9 @@ a {
   .specification__table th:nth-last-child(1), .specification__table th:nth-last-child(2), .specification__table th:nth-last-child(3) {
     text-align: center; }
   .specification__table th:nth-child(1) {
-    width: 31%; }
+    width: 32%; }
   .specification__table th:nth-child(2) {
-    width: 7%; }
+    width: 6%; }
   .specification__table th:nth-child(3) {
     width: 27%; }
   .specification__table th:nth-child(4) {
@@ -2712,13 +2712,16 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  transition: transform 0.2s linear;
   width: 100%;
   height: 100%;
   min-height: 15px;
   padding: 0;
   background-color: transparent;
   border: none;
-  outline: none; }
+  transform: rotate(0);
+  outline: none;
+  cursor: pointer; }
   .specification__replacement-row-toggle path {
     transition: stroke 0.2s linear;
     stroke: #000; }
@@ -2757,6 +2760,12 @@ a {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("/img/icon-pdf.svg"); }
+
+.specification__replacement-row--head {
+  cursor: pointer; }
+
+.specification__replacement-row--head.open .specification__replacement-row-toggle {
+  transform: rotate(-180deg); }
 
 @media (max-width: 1199px) {
   .specification {

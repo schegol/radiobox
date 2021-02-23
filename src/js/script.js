@@ -257,4 +257,23 @@ $(document).ready(function() {
     parent.toggleClass('filter__single-block--open');
     parent.find('.filter__single-block-body').slideToggle(200);
   });
+
+  //specifications:
+  const specToggles = $('.specification__replacement-row--head, .specification__replacement-row-toggle');
+  const hiddenReplacementRows = $('.specification__replacement-row:not(.specification__replacement-row--head)');
+
+  hiddenReplacementRows.hide();
+  specToggles.click(function (e) {
+    let startingRow;
+
+    e.stopPropagation();
+    if($(this).hasClass('specification__replacement-row-toggle')) {
+      startingRow = $(this).parents('.specification__replacement-row--head');
+      startingRow.toggleClass('open');
+    } else {
+      startingRow = $(this);
+      startingRow.toggleClass('open');
+    }
+    startingRow.nextUntil('tr:not(.specification__replacement-row)').fadeToggle(400);
+  });
 });
